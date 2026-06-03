@@ -20,7 +20,7 @@ The product becomes more valuable as users build habits, track progress, and rec
 However, users can relatively easily migrate to another AI wellness platform if a competitor offers similar personalization and imports their data. The workflow is valuable but not yet deeply embedded in users' daily lives.
 
 **Named attacker (from partner challenge):**
-OpenAI could launch a personalized lifestyle coaching mode inside ChatGPT.
+Noom; Noom represents the most credible direct competitor because it already owns the behavioural coaching relationship with millions of users. Its combination of proven methodology, brand recognition, and user engagement could reduce differentiation if AI-powered coaching becomes a standard feature.
 
 ---
 
@@ -34,7 +34,7 @@ This creates a unique dataset that improves personalization over time and genera
 The score is not a 5 because large platforms may eventually gain access to similar health and behavioral signals through integrations with wearables and health ecosystems.
 
 **Named attacker (from partner challenge):**
-Apple Health + Apple Intelligence
+Apple Health + Apple Intelligence; Apple Health and Apple Intelligence represent the greatest threat to our data advantage because Apple controls a large portion of the health and behavioural data ecosystem. If Apple combines these data assets with personalised AI coaching, it could significantly narrow the uniqueness of our dataset and insights.
 
 ---
 
@@ -48,7 +48,7 @@ If major platforms introduce native AI lifestyle companions, user acquisition an
 The product can partially defend itself through superior personalization, coaching methodology, and proprietary behavioral data, but platform encroachment remains a substantial risk.
 
 **Named attacker (from partner challenge):**
-Apple
+OpenAI; OpenAI represents the largest platform risk because it controls the underlying AI interaction layer used by millions of consumers. A native lifestyle companion built into ChatGPT could reduce customer acquisition opportunities and make differentiation significantly more difficult for independent applications.
 
 ---
 
