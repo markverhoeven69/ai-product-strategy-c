@@ -67,22 +67,30 @@ Launch a native AI Lifestyle Coach inside ChatGPT, integrated with health and we
 70%
 
 ### 2. Vertical Competitor
+
 **Attacker:**
 Noom
+
 **Vector:**
 Add advanced AI coaching and personalised health guidance to its existing behaviour-change platform.
+
 **Time-to-threat:**
 6-12 months
+
 **% of value at risk:**
 60%
 
 ### 3. Adjacent Expansion
+
 **Attacker:**
 Apple
+
 **Vector:**
 Expand Apple Health and Apple Intelligence into a proactive lifestyle coaching platform with reimbursement partnerships.
+
 **Time-to-threat:**
 12-24 months
+
 **% of value at risk:**
 80%
 
@@ -94,35 +102,39 @@ Expand Apple Health and Apple Intelligence into a proactive lifestyle coaching p
 
 **Attacker:**
 OpenAI
+
 **Attack vector (target the weakest loop):**
 Exploit the lack of ecosystem lock-in and deliver AI lifestyle coaching directly inside ChatGPT.
+
 **Weeks 1-4 - what they ship:**
-ChatGPT Lifestyle Coach
-Goal setting
-Habit tracking
-Daily coaching conversations
-Personal health plans
-Basic wearable integrations
+* ChatGPT Lifestyle Coach
+* Goal setting
+* Habit tracking
+* Daily coaching conversations
+* Personal health plans
+* Basic wearable integrations
+
 **Weeks 5-8 - how they poach users:**
-Included in existing ChatGPT subscriptions
-One-click migration from standalone lifestyle apps
-Superior voice interaction
-Integrated memory and personalisation
+* Included in existing ChatGPT subscriptions
+* One-click migration from standalone lifestyle apps
+* Superior voice interaction
+* Integrated memory and personalisation
+
 **Weeks 9-12 - why users don't come back:**
-No additional app required
-Existing ChatGPT habit already established
-Lower friction
-Faster product improvements through scale
+* No additional app required
+* Existing ChatGPT habit already established
+* Lower friction
+* Faster product improvements through scale
+
 **Your defense:**
 AI Lifestyle Companion focuses on outcomes rather than conversations.
 
 The platform combines:
-
-AI coaching
-certified lifestyle coaches
-Dutch healthcare workflows
-reimbursement pathways
-evidence-based interventions
-longitudinal behavioural outcome data
+* AI coaching
+* certified lifestyle coaches
+* Dutch healthcare workflows
+* reimbursement pathways
+* evidence-based interventions
+* longitudinal behavioural outcome data
 
 The long-term moat is not AI coaching itself, but becoming embedded in the Dutch preventive healthcare ecosystem where healthcare providers, coaches, reimbursement programmes, and users create a workflow that generic AI assistants cannot easily replicate.
