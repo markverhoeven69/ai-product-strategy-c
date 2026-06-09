@@ -10,7 +10,7 @@
 | **Eval** | Human review and user feedback provide quality validation. Automated evaluation benchmarks are planned but not yet implemented. | H | Run predefined regression tests and compare output quality across alternative providers before full migration. |
 
 ## Portability Score
-**Partial**
+### Partial
 The product is intentionally designed to keep behavioural data, coaching outcomes, user profiles and healthcare workflows outside the foundation model. However, the current prototype relies primarily on a single AI provider and lacks automated model-routing and evaluation capabilities.
 
 ## If OpenAI doubles pricing tomorrow:
