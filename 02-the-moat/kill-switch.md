@@ -38,4 +38,4 @@ What remains defensible is:
 * Evidence-based intervention effectiveness across user segments.
 * A workflow connecting users, AI coaching, human coaching and measurable health outcomes.
 
-The long-term moat is not AI coaching itself, but becoming embedded within the Dutch preventive healthcare ecosystem where data, workflows, coaches and healthcare partners create value that a general-purpose AI assistant cannot easily replicate.
+#### The long-term moat is not AI coaching itself, but becoming embedded within the Dutch preventive healthcare ecosystem where data, workflows, coaches and healthcare partners create value that a general-purpose AI assistant cannot easily replicate.
