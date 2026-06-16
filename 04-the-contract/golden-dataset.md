@@ -58,41 +58,104 @@ A model update is approved only when it maintains or improves performance across
 
 ---
 
-## Confidence UX Design
+### Confidence UX Design
 
-**Approach:** Tiered confidence combined with evidence visibility and human-in-the-loop escalation.
+### Approach
 
-### High confidence (>90%)
+The AI exposes uncertainty instead of hiding it. Recommendations are presented with confidence levels, supporting drivers, and clear escalation paths when health-related risk, missing information, or conflicting signals reduce confidence. The goal is not to maximize certainty, but to help users understand when to trust, question, or override a recommendation.
 
-* AI provides direct recommendation.
-* Displays: "Based on established lifestyle guidelines."
-* User can view supporting reasoning and sources.
+### Confident (>90%)
 
-### Medium confidence (70-90%)
+The AI provides a clear recommendation and actionable next step.
 
-* AI softens language:
+**Displays:**
 
-  * "Based on the information provided, a useful next step may be..."
-* Displays uncertainty badge.
-* Suggests additional questions to improve confidence.
+* Confidence: High
+* Key drivers behind the recommendation
+* Expected benefit
 
-### Low confidence (<70%)
+**Example:**
+"Based on your consistent sleep pattern and activity data, increasing your daily step goal by 1,000 steps is recommended."
 
-* AI avoids firm recommendations.
-* States missing information.
-* Prompts user for clarification.
-* Routes high-risk situations to human support or healthcare professionals.
+**User can:**
+
+* View recommendation drivers
+* Accept or modify the plan
+* View supporting lifestyle principles
+
+### Uncertain (50–90%)
+
+The AI provides a tentative recommendation and explicitly communicates what information is missing.
+
+**Displays:**
+
+* Confidence: Medium
+* Missing information that could affect the recommendation
+* Alternative explanations when applicable
+
+**Example:**
+"Based on the information available, improving sleep quality may help reduce fatigue. Additional information about stress levels would increase confidence in this recommendation."
+
+**User can:**
+
+* Answer follow-up questions
+* Provide missing context
+* Request alternative explanations
+
+### Not Confident (<50%)
+
+The AI does not provide a definitive recommendation.
+
+**Displays:**
+
+* Confidence: Low
+* Reason for uncertainty
+* Missing information required for guidance
+
+**Example:**
+"There is insufficient information to provide reliable guidance."
+
+**Actions:**
+
+* Ask clarifying questions
+* Recommend professional support when appropriate
+* Escalate health-risk situations
+* Avoid generating potentially misleading advice
 
 ### User Control Surface
 
-Users can:
+Users can actively inspect, correct, and improve recommendations.
 
-* View why a recommendation was made.
-* Correct AI assumptions.
-* Rate usefulness of advice.
-* Report inaccurate recommendations.
-* Request alternative suggestions.
-* Turn explanation mode on/off.
+**Feedback options available on every recommendation:**
+
+* Accurate
+* Missing context
+* Not realistic for me
+* Too generic
+* Not actionable
+
+**User capabilities:**
+
+* View recommendation drivers and reasoning
+* Correct or override recommendations
+* Provide additional context
+* Request alternative recommendations
+
+**Feedback loop:**
+
+* Corrections update the user profile
+* Feedback is reviewed for inclusion in future evaluation datasets
+* Repeated correction patterns are used to improve model performance and personalization
+
+**Enabled controls:**
+
+* Users see AI reasoning / drivers
+* Users correct and override outputs
+* Corrections feed back into the dataset and evaluation process
+
+**Not enabled:**
+
+* Users adjust the confidence threshold (not exposed in the current product version)
 
 ---
 
