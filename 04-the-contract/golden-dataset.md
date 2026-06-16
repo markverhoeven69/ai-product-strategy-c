@@ -160,14 +160,12 @@ Users can actively inspect, correct, and improve recommendations.
 
 ## Reliability Contract
 
-| Metric             | Target                      | Measurement                                        | Alert Threshold  |
-| ------------------ | --------------------------- | -------------------------------------------------- | ---------------- |
-| Accuracy           | ≥92%                        | Weekly evaluation against 300 golden dataset cases | <88%             |
-| Hallucination rate | <1%                         | Weekly review of unsupported health claims         | >2%              |
-| Latency (p95)      | <2 sec                      | Production monitoring dashboard                    | >5 sec           |
-| Drift velocity     | <0.5% accuracy decline/week | 4-week rolling evaluation trend                    | >1% decline/week |
-
----
+| Metric             |                    Target | Measurement                                                                             |       Alert Threshold |
+| ------------------ | ------------------------: | --------------------------------------------------------------------------------------- | --------------------: |
+| Accuracy           |                      ≥85% | Weekly evaluation against the golden dataset using rule checks and LLM-as-judge review  |                  <80% |
+| Hallucination rate |                       <2% | Weekly safety review of unsupported medical, nutrition, supplement, or lifestyle claims |                   >4% |
+| Latency (p95)      |                    <3 sec | Production monitoring of p95 response time by endpoint                                  | >6 sec for 10 minutes |
+| Drift velocity     | <1% accuracy decline/week | 4-week rolling trend on golden dataset performance                                      |      >2% decline/week |
 
 ## HITL Architecture
 
@@ -175,23 +173,31 @@ Users can actively inspect, correct, and improve recommendations.
 
 A human enters the loop when:
 
-* Confidence score falls below 60%.
-* Potential mental health risk is detected.
-* User mentions medication changes.
-* User requests diagnosis.
-* Safety classifier flags content.
+* Confidence score falls below 60%
+* A safety classifier flags medical, mental health, medication, or diagnosis-related content
+* The user asks for medication dosage, diagnosis, or treatment decisions
+* The AI detects contradictory user information that may affect health guidance
+* The same user correction pattern appears repeatedly
 
-### Escalation Path
+### Reviewer
 
-1. AI detects uncertainty or risk.
-2. AI informs user that specialized support is recommended.
-3. Case is routed to:
+* Lifestyle coach reviews behavior-change and habit-planning issues
+* Healthcare professional reviews medical-risk or medication-related escalations
+* Product owner reviews repeated AI failure patterns and golden dataset gaps
 
-   * Lifestyle coach (behavior change questions)
-   * Healthcare professional (medical questions)
-   * Safety review process (high-risk content)
-4. Human feedback is captured.
-5. Corrections are fed back into the golden dataset and evaluation process.
+### Feedback Loop
+
+* Human corrections are logged as review events
+* Repeated corrections are added to the golden dataset
+* Safety-related failures trigger immediate prompt or guardrail review
+* Dataset performance is reviewed weekly before model, prompt, or memory changes are shipped
+
+### Consequences When Thresholds Trip
+
+* Accuracy below threshold → gold-set audit and prompt review
+* Hallucination rate above threshold → pause risky recommendation flows and review safety guardrails
+* Latency above threshold → page technical owner and inspect model/API routing
+* Drift above threshold → audit recent product, prompt, memory, or model changes
 
 ---
 
