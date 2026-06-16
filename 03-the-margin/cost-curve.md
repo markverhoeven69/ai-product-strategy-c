@@ -13,6 +13,8 @@
 
 **Assumption:** 150 AI interactions per active user per month, with 80% routed to a low-cost model and 20% routed to a frontier model.
 
+---
+
 ### Input Margin Calculator
 
 | Input                          | Waarde     | Toelichting                          |
@@ -22,6 +24,7 @@
 | Revenue per User / Month       | $19.99 | Premium AI coaching subscription     |
 | Non-AI COGS / User / Month     | $2.00  | Hosting, support, analytics, storage |
 
+---
 
 ## Cascading Strategy
 
@@ -52,6 +55,8 @@ GPT-4o / Claude Sonnet equivalent
 * 20% Frontier model
 
 Most traffic should hit the cheap model while only complex requests go to the expensive layer.
+
+---
 
 ## Bundling Strategy (Leaders, Fillers & Killers)
 
@@ -105,9 +110,11 @@ Bundle if >70% of users use it:
 * AI health agent
 * Deep analysis workflows
 
+---
+
 ## Pricing Model
 
-**Current pricing:**
+### Current pricing
 €9.99/month premium subscription
 
 ### Proposed AI Pricing
@@ -125,8 +132,6 @@ Includes:
 Target user:
 Users seeking ongoing lifestyle support and accountability.
 
----
-
 #### AI Coach Pro — €19.99/month
 
 Includes everything in Essential, plus:
@@ -138,8 +143,6 @@ Includes everything in Essential, plus:
 
 Target user:
 Users actively working toward health, fitness, sleep, or productivity goals.
-
----
 
 #### AI Health Agent — €34.99/month
 
@@ -154,9 +157,7 @@ Includes everything in Pro, plus:
 Target user:
 Power users seeking highly personalized and proactive coaching.
 
----
-
-**Model: Hybrid Subscription**
+### Model: Hybrid Subscription
 
 Primary Revenue Model:
 
@@ -179,6 +180,8 @@ The core coaching experience remains subscription-based, while high-cost AI work
 
 **Goal:** Move toward outcome-oriented pricing while maintaining predictable subscription revenue and sustainable AI economics.
 
+---
+
 ## Stress Tests
 
 | Scenario | Impact on Margin | Response |
@@ -186,6 +189,8 @@ The core coaching experience remains subscription-based, while high-cost AI work
 | Inference costs 3x | Margin drops from 88% → 79% | Increase routing to small model, tighten prompts |
 | Heaviest segment doubles | Margin drops from 88% → 84% | Introduce usage limits and premium tier |
 | Model provider raises prices 50% | Margin drops from 88% → 84% | Multi-provider strategy and renegotiate contracts |
+
+---
 
 ## Board One-Pager
 
