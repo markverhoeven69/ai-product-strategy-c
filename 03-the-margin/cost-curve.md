@@ -9,7 +9,7 @@
 | Infrastructure | €0.50 | Hosting, API gateway, monitoring |
 | Data/storage | €0.20 | User profiles, history, embeddings |
 | Human-in-the-loop | €0.20 | Occasional review of edge cases and safety checks |
-| **Total AI COGS** | €1.35 | Blended monthly AI cost |
+| **Total COGS** | €1.35 | Blended monthly AI cost |
 
 **Assumption:** 150 AI interactions per active user per month, with 80% routed to a low-cost model and 20% routed to a frontier model.
 
@@ -186,9 +186,11 @@ The core coaching experience remains subscription-based, while high-cost AI work
 
 | Scenario | Impact on Margin | Response |
 |----------|-----------------|----------|
-| Inference costs 3x | Margin drops from 88% → 79% | Increase routing to small model, tighten prompts |
-| Heaviest segment doubles | Margin drops from 88% → 84% | Introduce usage limits and premium tier |
-| Model provider raises prices 50% | Margin drops from 88% → 84% | Multi-provider strategy and renegotiate contracts |
+| Inference costs 3x | Margin drops from 93% → 88% | Increase routing to small model, tighten prompts |
+| Heaviest segment doubles | Margin drops from 93% → 90% | Introduce usage limits and premium tier |
+| Model provider raises prices 50% | Margin drops from 93% → 91% | Multi-provider strategy and renegotiate contracts |
+
+Our economics remain resilient even under adverse AI cost scenarios.
 
 ---
 
@@ -212,9 +214,8 @@ Personalized AI coaching and behavior-change support.
 
 **Net margin shift:**
 * Revenue increase: +100%
-* AI cost increase: +225%
 
-AI costs introduced but remain a small fraction of revenue due to cascading architecture.
+Operating costs increase modestly, while remaining a small fraction of revenue due to model cascading and premium feature segmentation.
 
 Net result:
 
