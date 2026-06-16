@@ -4,12 +4,24 @@
 
 | Cost Category | Per-User/Month | Notes |
 |--------------|----------------|-------|
-| Inference (primary model) | €1.20 | Daily coaching conversations, habit recommendations |
-| Inference (cascading/triage) | €0.40 | Small model handles ~80% of requests |
+| Inference (primary model) | €0.25 | Daily coaching conversations, habit recommendations |
+| Inference (cascading/triage) | €0.20 | Small model handles ~80% of requests |
 | Infrastructure | €0.50 | Hosting, API gateway, monitoring |
 | Data/storage | €0.20 | User profiles, history, embeddings |
-| Human-in-the-loop | €0.30 | Occasional review of edge cases and safety checks |
-| **Total AI COGS** | €2.60 | Blended monthly AI cost |
+| Human-in-the-loop | €0.20 | Occasional review of edge cases and safety checks |
+| **Total AI COGS** | €1.35 | Blended monthly AI cost |
+
+**Assumption:** 150 AI interactions per active user per month, with 80% routed to a low-cost model and 20% routed to a frontier model.
+
+### Input Margin Calculator
+
+| Input                          | Waarde     | Toelichting                          |
+| ------------------------------ | ---------- | ------------------------------------ |
+| Avg AI Requests / User / Month | 150    | 3-5 interacties per dag              |
+| Blended Cost per Request       | $0.003 | 80% mini-model, 20% frontier-model   |
+| Revenue per User / Month       | $19.99 | Premium AI coaching subscription     |
+| Non-AI COGS / User / Month     | $2.00  | Hosting, support, analytics, storage |
+
 
 ## Cascading Strategy
 
@@ -33,7 +45,7 @@ GPT-4o / Claude Sonnet equivalent
 * Personalized lifestyle plans
 * Multi-step coaching
 * Emotional support conversations
-* Complex health reasoning
+* Health information synthesis and long-context reasoning
 
 **Expected cascade ratio:**
 * 80% Small model
@@ -58,7 +70,6 @@ Low-cost features that increase perceived value:
 * Daily summaries
 * Motivational messages
 * Habit streak tracking
-* Meal suggestions
 * Sleep insights
 * Progress reports
 
@@ -71,9 +82,13 @@ Keep as premium add-ons:
 * Long-form report generation
 * Continuous monitoring workflows
 * Image-based nutrition analysis
+* Personalized nutrition planning
 * Integration with wearables and automated coaching loops
 
 These create disproportionate inference costs and should not be bundled into the base plan.
+
+Killer usage estimate: 15–25%
+Decision: Sell as premium add-on
 
 ### 70% Rule
 Bundle if >70% of users use it:
@@ -95,78 +110,106 @@ Bundle if >70% of users use it:
 **Current pricing:**
 €9.99/month premium subscription
 
-**Proposed AI pricing:**
+### Proposed AI Pricing
 
-***Essential***
-€12.99/month
+#### Essential — €12.99/month
 
 Includes:
 
-* AI coach
-* Daily guidance
+* AI lifestyle coach
+* Daily guidance and check-ins
 * Goal tracking
 * Weekly summaries
+* Habit and progress insights
 
-***AI Coach Pro***
-€24.99/month
+Target user:
+Users seeking ongoing lifestyle support and accountability.
 
-Includes:
+---
 
-* Unlimited coaching
-* Advanced plans
-* Predictive insights
-* Premium AI models
+#### AI Coach Pro — €19.99/month
 
-***AI Health Agent***
-€49.99/month
+Includes everything in Essential, plus:
 
-Includes:
+* Extended coaching conversations
+* Personalized action plans
+* Predictive insights and recommendations
+* Priority access to frontier AI models
 
-* Deep analysis
-* Multi-step planning
+Target user:
+Users actively working toward health, fitness, sleep, or productivity goals.
+
+---
+
+#### AI Health Agent — €34.99/month
+
+Includes everything in Pro, plus:
+
+* Deep analysis workflows
+* Personalized nutrition planning
 * Wearable integrations
-* Autonomous coaching workflows
+* Continuous monitoring and coaching loops
+* Autonomous planning and follow-up actions
 
+Target user:
+Power users seeking highly personalized and proactive coaching.
 
-**Model:**
+---
 
-***Hybrid***
+**Model: Hybrid Subscription**
 
-* Base subscription (seat-based)
-* Premium AI usage tiers
-* Outcome-oriented value proposition
+Primary Revenue Model:
 
-Goal: move toward outcome pricing rather than pure access pricing.
+* Seat-based subscription
+
+Secondary Revenue Model:
+
+* Usage-based access for premium AI workflows
+* Premium AI Health Agent tier
+
+Future Opportunities:
+
+* Outcome-based coaching programs
+* Goal-specific transformation packages
+* Partner-sponsored health interventions
+
+### Pricing Philosophy
+
+The core coaching experience remains subscription-based, while high-cost AI workflows are monetized through premium tiers. This aligns customer value with AI consumption and protects long-term margins.
+
+**Goal:** Move toward outcome-oriented pricing while maintaining predictable subscription revenue and sustainable AI economics.
 
 ## Stress Tests
 
 | Scenario | Impact on Margin | Response |
 |----------|-----------------|----------|
-| Inference costs 3x | Margin drops from ~80% to ~60% | Increase routing to small model, tighten prompts |
-| Heaviest segment doubles | AI COGS increase ~40% | Introduce usage limits and premium tier |
-| Model provider raises prices 50% | Margin drops ~10–15 pts | Multi-provider strategy and renegotiate contracts |
+| Inference costs 3x | Margin drops from 88% → 79% | Increase routing to small model, tighten prompts |
+| Heaviest segment doubles | Margin drops from 88% → 84% | Introduce usage limits and premium tier |
+| Model provider raises prices 50% | Margin drops from 88% → 84% | Multi-provider strategy and renegotiate contracts |
 
 ## Board One-Pager
 
-**Before (traditional SaaS):**
+**Before (traditional Lifestyle App):**
 * Revenue/User/Month: €9.99
 * COGS/User/Month: €0.80
 * Gross Margin: ~92%
 * Value proposition:
 
-Static lifestyle app with limited personalization.
+Static habit tracking and lifestyle content.
 
 **After (AI-enabled):**
-* Revenue/User/Month: €24.99
-* COGS/User/Month: €2.60
-* Gross Margin: ~90%
+* Revenue/User/Month: €19.99
+* COGS/User/Month: €1.35
+* Gross Margin: ~93%
 * Value proposition:
 
-Personal AI lifestyle coach delivering personalized guidance, recommendations, and behavior-change support at scale.
+Personalized AI coaching and behavior-change support.
 
 **Net margin shift:**
-* Revenue increase: +150%
+* Revenue increase: +100%
 * AI cost increase: +225%
+
+AI costs introduced but remain a small fraction of revenue due to cascading architecture.
 
 Net result:
 
