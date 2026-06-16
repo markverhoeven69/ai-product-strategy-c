@@ -167,6 +167,14 @@ Users can actively inspect, correct, and improve recommendations.
 | Latency (p95)      |                    <3 sec | Production monitoring of p95 response time by endpoint                                  | >6 sec for 10 minutes |
 | Drift velocity     | <1% accuracy decline/week | 4-week rolling trend on golden dataset performance                                      |      >2% decline/week |
 
+| Metric             | Consequence                         |
+| ------------------ | ----------------------------------- |
+| Accuracy           | 🔍 Gold-set audit                   |
+| Hallucination Rate | ⏪ Auto-rollback + 🔍 Gold-set audit |
+| Latency (p95)      | 📟 Page on-call                     |
+| Drift Velocity     | 🔍 Gold-set audit                   |
+| HITL Trigger       | 👤 Human queue                      |
+
 ## HITL Architecture
 
 ### Human Review Trigger
