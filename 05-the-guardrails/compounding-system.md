@@ -52,16 +52,163 @@ Support feedback and user objections are reviewed manually and are not consisten
 
 ---
 
-## Governance Policy
+## Governance Policy – AI Lifestyle Companion v1.0
 
-**Scope:**
-**Autonomy boundaries:**
-**Escalation triggers:**
-**Audit cadence:**
-**Regulatory exposure (EU AI Act / other):**
+## Scope
+
+### Included
+
+This policy governs all AI-powered coaching features within the AI Lifestyle Companion platform, including:
+
+* Personalized lifestyle recommendations
+* Habit coaching and behavior change support
+* Goal tracking and progress monitoring
+* Motivational messaging
+* Nutrition, exercise, sleep, and stress-management guidance
+* Behavioral insights and progress summaries
+
+### Excluded
+
+The system does not provide:
+
+* Medical diagnoses
+* Clinical decision support
+* Treatment recommendations
+* Medication advice
+* Emergency response services
+* Mental healthcare interventions
+* Healthcare professional services
+
+## Autonomy Boundaries
+
+### Decision 1: Personalized Lifestyle Recommendations
+
+**Level:** Auto
+
+The AI may autonomously generate lifestyle recommendations based on user goals, preferences, historical behavior, and progress data.
+
+### Decision 2: Coaching Plan Adjustments
+
+**Level:** Auto
+
+The AI may autonomously adapt coaching strategies, motivational techniques, and habit-building recommendations based on user feedback and behavioral patterns.
+
+### Decision 3: Health Risk Assessment
+
+**Level:** Human Approval / Never Auto
+
+The AI may not autonomously provide diagnoses, treatment recommendations, medication advice, or recommendations related to severe physical or mental health conditions.
+
+## Escalation Triggers
+
+The system must immediately escalate when:
+
+1. A user requests a medical diagnosis.
+2. A user requests medication advice.
+3. A user expresses self-harm or suicidal intent.
+4. A user shows signs of an eating disorder.
+5. Severe mental health concerns are detected.
+6. The model confidence falls below established safety thresholds.
+7. A user explicitly requests professional medical assistance.
+
+## Audit Cadence
+
+### Weekly
+
+* Review user feedback and rejected recommendations.
+* Review safety-related incidents and escalation events.
+
+**Owner:** Product Owner
+
+### Monthly
+
+* Review coaching effectiveness.
+* Review recommendation quality.
+* Review escalation statistics and system performance.
+
+**Owner:** AI Product Team
+
+### Quarterly
+
+* Conduct governance review.
+* Review bias and fairness metrics.
+* Review privacy compliance and safety controls.
+
+**Owner:** Product Lead and Compliance Advisor
+
+## Regulatory Exposure
+
+### Applicable Regulations
+
+* EU AI Act
+* GDPR
+* Consumer Protection Regulations
+* Digital Services Act (where applicable)
+
+### Risk Classification
+
+**EU AI Act Risk Tier:** Limited Risk
+
+### Controls in Place
+
+* Explicit user consent
+* Data minimization principles
+* AI transparency disclosures
+* Human escalation pathways
+* No automated medical decision-making
+* Secure data storage and access management
+* Periodic governance and safety audits
 
 ## Agent Topology
-<!-- If using agents: what can each agent do? What can't it do? Who approves what? -->
+
+### Coaching Agent
+
+**Can**
+
+* Generate lifestyle coaching advice
+* Provide motivation and encouragement
+* Recommend healthy habits
+* Suggest goal adjustments
+
+**Cannot**
+
+* Diagnose medical conditions
+* Prescribe treatments
+* Provide medication advice
+
+**Owner:** Product Team
+
+### Goal Tracking Agent
+
+**Can**
+
+* Track progress toward goals
+* Identify behavioral patterns
+* Generate progress summaries
+
+**Cannot**
+
+* Make clinical assessments
+* Determine medical risk
+
+**Owner:** Product Team
+
+### Safety Agent
+
+**Can**
+
+* Detect high-risk conversations
+* Trigger escalation workflows
+* Flag potentially harmful interactions
+
+**Cannot**
+
+* Resolve medical cases autonomously
+* Replace professional healthcare support
+
+**Owner:** Human Reviewer
+
+---
 
 ## Shadow AI Audit
 
